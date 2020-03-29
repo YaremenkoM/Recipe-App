@@ -1,29 +1,22 @@
 import React from 'react';
-
-import ListGroup from 'react-bootstrap/ListGroup';
+import './Recipe.css';
 
 const Recipe = ({title, calories, image, ingredients}) => {
     return(
-        <div>
+        <div className="RecipeBlock">
             <h1>{title}</h1>
-             <ul>
+            <img className="RecipeImg" src={image} alt=""></img>
+            <p><b>Ingredients:</b> </p>
+            <ul>
                 {ingredients.map(ingredient => (
                     <li>
                         <i>{ingredient.text}</i>, 
                         <br/>weight: {ingredient.weight}
                     </li>
                 ))}
-            </ul>
-            <ListGroup variant="flush">
-                {ingredients.map(ingredient => (
-                    <ListGroup.Item>
-                        <i>{ingredient.text}</i>, 
-                        weight: {ingredient.weight}
-                    </ListGroup.Item>
-                ))}
-            </ListGroup> 
-            <p>{calories}</p>
-            <img src={image} alt=""></img>
+            </ul> 
+            <p><b>Calories: </b></p>
+            <p>{calories}</p>       
         </div>
     );
 }

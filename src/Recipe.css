@@ -1,0 +1,17 @@
+.RecipeBlock{
+    background-color: #fcf5fc;
+    width: 40%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RecipeImg{
+    border-radius: 50%;
+    width: 65%;
+    padding: 20px 0;
+}
